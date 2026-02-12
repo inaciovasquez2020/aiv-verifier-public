@@ -1,0 +1,13 @@
+{
+  "claim_0001": {
+    "meaning": "This certificate is immutable after signing; verification checks sha256(json) and minisign over the hash."
+  },
+  "issuer": {
+    "key_id": ""
+  },
+  "meta": {
+    "claim_id": "CLAIM_0001",
+    "title": "Certificate Integrity",
+    "version": "1.0"
+  }
+}
