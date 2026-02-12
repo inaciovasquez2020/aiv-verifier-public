@@ -1,0 +1,8 @@
+{
+  "meta": { "claim_id": "CLAIM_0004", "title": "Multi-file Manifest Integrity", "version": "1.0" },
+  "claim_0004": {
+    "dir_layout": "claim4_demo/",
+    "manifest_alg": "sorted(find)+sha256-lines+sha256",
+    "expected_manifest_sha256": "bb09ac3c2ecb36fc39bb2cb1f7d3c0206e694c62a3bc1885557aae67b4aa79e6"
+  }
+}
