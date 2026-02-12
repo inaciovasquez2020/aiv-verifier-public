@@ -1,0 +1,8 @@
+# never publish secret key material
+keys/*sec*
+keys/*secret*
+keys/*priv*
+*.pem
+*.key
+!.gitignore
+!keys/aiv_pub.key

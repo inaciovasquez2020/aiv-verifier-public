@@ -1,0 +1,41 @@
+{
+  "certificate_type": "AIV-CERT",
+  "claim": {
+    "domain": "AIV",
+    "id": "CLAIM_0001",
+    "statement_hash": ""
+  },
+  "declared_constraints": {
+    "capacity_bound": "AIV.CAPACITY.v1",
+    "locality_bound": "AIV.LOCALITY.v1",
+    "resource_model": "AIV.RESOURCE.DETERMINISTIC_REPLAY.v1"
+  },
+  "reproducibility": {
+    "certificate_hash": "68eff07ad03f42d2ad3dc6f6d7d2294b147e779ae2e10fb8f2ae0e40d374e77f",
+    "environment_hash": "LOCAL",
+    "toolkit_version": "urf-verifier@local"
+  },
+  "signature": {
+    "algorithm": "ssh-ed25519",
+    "issuer": "Vasquez Research",
+    "public_key_fingerprint": "SHA256:2utrJzSLtMyfM4+u6S0OWGyZIBH8UT7euGiC3kO0nNA",
+    "signature": "LS0tLS1CRUdJTiBTU0ggU0lHTkFUVVJFLS0tLS0KVTFOSVUwbEhBQUFBQVFBQUFETUFBQUFMYzNOb0xXVmtNalUxTVRrQUFBQWc2anlOTzhXcS9IOWdweWxVZmxSVkpBYTFUWQpaTFlsVUpTbXdYdUpyZmJlY0FBQUFJWVdsMkxXTmxjblFBQUFBQUFBQUFCbk5vWVRVeE1nQUFBRk1BQUFBTGMzTm9MV1ZrCk1qVTFNVGtBQUFCQXpWQzdhYjh5K0NtMWtENkl2VnUwSHBJWnVTQ2xmVkR1MzBLTzRIbHpmeHVSRjZqVjN4bXpuV1AyZ2UKai9aQSt2YnJicHp4aWJ2a1VSQzgvNzIwMERBdz09Ci0tLS0tRU5EIFNTSCBTSUdOQVRVUkUtLS0tLQo="
+  },
+  "verdict": {
+    "reason_code": "AIV-PASS-BASELINE",
+    "status": "ADMISSIBLE"
+  },
+  "verified_invariants": [
+    {
+      "name": "SIGC",
+      "result": "PASS",
+      "version": "1.0"
+    },
+    {
+      "name": "CEICI",
+      "result": "PASS",
+      "version": "1.0"
+    }
+  ],
+  "version": "1.0"
+}
