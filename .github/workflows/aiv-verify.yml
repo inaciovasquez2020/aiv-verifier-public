@@ -8,18 +8,24 @@ jobs:
   verify:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Install minisign
+      - name: Install minisign + python3
         run: |
           sudo apt-get update
-          sudo apt-get install -y minisign
+          sudo apt-get install -y minisign python3
 
-      - name: Verify AIV certificates
+      - name: Verify AIV certificates (integrity + signature)
         run: |
           set -euo pipefail
           for cert in certs/*.json; do
             echo "Verifying $cert"
             ./scripts/verify_cert.sh "$cert"
+          done
+
+      - name: Enforce CLAIM_0002 (when present)
+        run: |
+          set -euo pipefail
+          for cert in certs/*.json; do
+            ./scripts/enforce_claim_0002.sh "$cert"
           done
