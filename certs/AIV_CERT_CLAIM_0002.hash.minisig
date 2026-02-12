@@ -1,4 +1,4 @@
-untrusted comment: aiv-cert-v1
-RURarskLjqm69Qpr1+Dx6ZgguS/aTboNoh1AD9PkJV5iHowbRYog2tdl19ulgeyiPW+WM/YSnJlXys56qEgA7RNJjBEA1kLChAo=
-trusted comment: timestamp:1770924081	file:AIV_CERT_CLAIM_0002.hash	hashed
-d54H96f41jMi99b3z9qyiRuGWjUzaelLGRD5+wyiocbts+ywDGRdBUUKmsn5kW9R7H33dugssyvDJ4i1uxZrBQ==
+untrusted comment: signature from minisign secret key
+RUQ1NW6gE7/kzUAbpIUOFwGPSryDFhPu/qc0Fg+1qbFQkC/uOfiQiym5aa5BZVnyk8a9Z5I9LjQUFchcB1+urtQcBoUB9kDDMg8=
+trusted comment: timestamp:1770931063	file:AIV_CERT_CLAIM_0002.json	hashed
+1onBM98lCghBFLDNWFKg88r+qpfh0Hf0kA6yVdWkI5X++lD+ltJXjRLKyUfV6sFpAdhNG3a2LeXeXjPCi1d9Dg==
