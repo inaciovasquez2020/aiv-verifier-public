@@ -2,7 +2,8 @@
   "meta": {
     "claim_id": "CLAIM_0002",
     "title": "Deterministic Reproducibility Invariant",
-    "version": "1.0"
+    "version": "1.0",
+    "expected_key_id": ""
   },
   "claim_0002": {
     "command": "printf 'hello\\n' > out.txt",

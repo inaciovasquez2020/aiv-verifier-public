@@ -19,6 +19,7 @@
   "meta": {
     "claim_id": "CLAIM_0005",
     "title": "Nondeterminism Witness",
-    "version": "1.0"
+    "version": "1.0",
+    "expected_key_id": ""
   }
 }

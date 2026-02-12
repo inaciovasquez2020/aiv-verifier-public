@@ -9,6 +9,7 @@
   "meta": {
     "claim_id": "CLAIM_0003",
     "title": "Environment Fingerprint Invariant",
-    "version": "1.0"
+    "version": "1.0",
+    "expected_key_id": ""
   }
 }

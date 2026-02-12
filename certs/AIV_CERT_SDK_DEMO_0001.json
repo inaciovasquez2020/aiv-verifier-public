@@ -8,6 +8,7 @@
   "meta": {
     "claim_id": "CLAIM_0001",
     "title": "Certificate Integrity",
-    "version": "1.0"
+    "version": "1.0",
+    "expected_key_id": ""
   }
 }

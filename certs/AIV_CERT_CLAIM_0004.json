@@ -1,5 +1,10 @@
 {
-  "meta": { "claim_id": "CLAIM_0004", "title": "Multi-file Manifest Integrity", "version": "1.0" },
+  "meta": {
+    "claim_id": "CLAIM_0004",
+    "title": "Multi-file Manifest Integrity",
+    "version": "1.0",
+    "expected_key_id": ""
+  },
   "claim_0004": {
     "dir_layout": "claim4_demo/",
     "manifest_alg": "sorted(find)+sha256-lines+sha256",
