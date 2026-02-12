@@ -16,6 +16,7 @@ STORED="$(cat "$HASH")"
 
 [[ "$REHASH" == "$STORED" ]] || { echo "FAIL: certificate modified"; exit 2; }
 
-minisign -Vm "$HASH" -x "$SIG" -p "$PUB" >/dev/null
+# Verify signature without enforcing comment policy (CI-safe)
+minisign -Vm "$HASH" -x "$SIG" -p "$PUB" -Q >/dev/null
 
 echo "PASS: AIV certificate verified (minisign)"
