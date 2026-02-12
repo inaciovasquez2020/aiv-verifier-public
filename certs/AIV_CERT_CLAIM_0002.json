@@ -1,0 +1,16 @@
+{
+  "meta": {
+    "claim_id": "CLAIM_0002",
+    "title": "Deterministic Reproducibility Invariant",
+    "version": "1.0"
+  },
+  "claim_0002": {
+    "command": "printf 'hello\\n' > out.txt",
+    "env": {
+      "PATH": "/usr/bin:/bin",
+      "LC_ALL": "C"
+    },
+    "artifact": "out.txt",
+    "hash_alg": "sha256"
+  }
+}
