@@ -1,0 +1,14 @@
+{
+  "claim_0003": {
+    "fingerprints": {
+      "minisign_version": "minisign 0.12",
+      "uname": "Darwin Inacios-MacBook-Air.local 25.2.0 Darwin Kernel Version 25.2.0: Tue Nov 18 21:08:48 PST 2025; root:xnu-12377.61.12~1/RELEASE_ARM64_T8132 arm64",
+      "verifier_script_sha256": "53d775bcd9734e046fdc81663fc1c6d83d0a486095a8675ab39e8621a3232ebe"
+    }
+  },
+  "meta": {
+    "claim_id": "CLAIM_0003",
+    "title": "Environment Fingerprint Invariant",
+    "version": "1.0"
+  }
+}
