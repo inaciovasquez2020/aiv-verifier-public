@@ -6,3 +6,9 @@ keys/*priv*
 *.key
 !.gitignore
 !keys/aiv_pub.key
+.venv/
+__pycache__/
+*/__pycache__/
+cobaya/
+cosmosis-standard-library/
+data/
