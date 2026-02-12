@@ -5,7 +5,7 @@ CERT="${1:?usage: verify_cert.sh cert.json}"
 
 HASH_FILE="${CERT%.json}.hash"
 SIG_FILE="${HASH_FILE}.minisig"
-PUB="keys/aiv_pub.key"
+PUB=certs/aiv_pub.key
 
 [[ -f "$CERT" ]]      || { echo "FAIL: cert missing"; exit 1; }
 [[ -f "$HASH_FILE" ]] || { echo "FAIL: hash missing"; exit 1; }
