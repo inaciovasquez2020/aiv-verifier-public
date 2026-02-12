@@ -1,0 +1,24 @@
+{
+  "claim_0005": {
+    "repro": {
+      "artifact": "out.txt",
+      "command": "python3 - <<'PY'\nimport os,random\nopen('out.txt','w').write(str(random.random())+'\\n')\nPY",
+      "env": {
+        "LANG": "C",
+        "LC_ALL": "C",
+        "PYTHONHASHSEED": "random"
+      },
+      "hash_alg": "sha256"
+    },
+    "witness": {
+      "description": "Two runs produce different artifact hashes under declared env",
+      "run1_sha256": "a4ef5e9600d279ce723f86d8bb4db5bb16a09546d4589422de8e0599653fa9e6",
+      "run2_sha256": "8769cbf26e07fd82b594d6b45da34c5d2c439284333101d83fb455577e2ace90"
+    }
+  },
+  "meta": {
+    "claim_id": "CLAIM_0005",
+    "title": "Nondeterminism Witness",
+    "version": "1.0"
+  }
+}
