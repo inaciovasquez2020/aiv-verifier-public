@@ -1,0 +1,25 @@
+name: AIV Certificate Verification
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install minisign
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y minisign
+
+      - name: Verify AIV certificates
+        run: |
+          set -euo pipefail
+          for cert in certs/*.json; do
+            echo "Verifying $cert"
+            ./scripts/verify_cert.sh "$cert"
+          done
