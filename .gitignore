@@ -12,3 +12,4 @@ __pycache__/
 cobaya/
 cosmosis-standard-library/
 data/
+scripts/keys/*.key
