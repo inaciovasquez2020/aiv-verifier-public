@@ -2,7 +2,6 @@
 set -euo pipefail
 
 CERT="$1"
-SIG="${CERT%.json}.hash.minisig"
-PUB="scripts/keys/active.pub"
+SIG="${CERT}.minisig"
 
-minisign -V -p "$PUB" -m "$CERT" -x "$SIG"
+minisign -Vm "$CERT" -x "$SIG" -p scripts/keys/active.pub
