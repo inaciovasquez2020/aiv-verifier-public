@@ -1,0 +1,5 @@
+      - name: Verify AIV certificates
+        run: |
+          for cert in certs/*.json; do
+            ./scripts/verify_cert.sh "$cert"
+          done
