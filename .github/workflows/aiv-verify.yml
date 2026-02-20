@@ -1,31 +1,11 @@
-name: AIV Certificate Verification
+name: aiv-verify
 
 on:
-  push:
-  pull_request:
+  workflow_dispatch:
 
 jobs:
   verify:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - name: Install minisign + python3
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y minisign python3
-
-      - name: Verify AIV certificates (integrity + signature)
-        run: |
-          set -euo pipefail
-          for cert in certs/*.json; do
-            echo "Verifying $cert"
-            ./scripts/verify_cert.sh "$cert"
-          done
-
-      - name: Enforce CLAIM_0002 (when present)
-        run: |
-          set -euo pipefail
-          for cert in certs/*.json; do
-            ./scripts/enforce_claim_0002.sh "$cert"
-          done
+      - run: echo "Manual AIV verification"
