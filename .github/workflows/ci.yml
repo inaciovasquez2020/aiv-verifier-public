@@ -8,4 +8,5 @@ jobs:
  runs-on: ubuntu-latest
  steps:
  - name: noop
- run: echo OK
+ run: |
+ echo OK
