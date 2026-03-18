@@ -7,4 +7,5 @@ jobs:
  noop:
  runs-on: ubuntu-latest
  steps:
- - run: echo OK
+ - name: noop
+ run: echo OK
