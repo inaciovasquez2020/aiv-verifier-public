@@ -7,4 +7,5 @@ jobs:
  noop:
  runs-on: ubuntu-latest
  steps:
- - run: echo CI disabled
+ - name: noop
+ run: exit 0
