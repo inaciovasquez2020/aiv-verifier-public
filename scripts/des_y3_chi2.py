@@ -1,49 +1,36 @@
+# ./scripts/des_y3_chi2.py
+
 import numpy as np
-from astropy.io import fits
-
-FITS_PATH = "data/des_y3/DES_Y3_3x2pt.fits"
-N_COSMO = 480   # DES Y3 3×2pt data length
+from scipy import stats
 
 
-def load_des_y3():
-    hdul = fits.open(FITS_PATH)
-
-    data = None
-    cov_full = None
-
-    for h in hdul:
-        if h.data is None:
-            continue
-
-        # Identify data vector (1D, length ~480)
-        if hasattr(h.data, "shape") and len(h.data.shape) == 1:
-            if h.data.shape[0] == N_COSMO:
-                data = np.array(h.data)
-
-        # Identify full covariance (square, ~1000×1000)
-        if hasattr(h.data, "shape") and len(h.data.shape) == 2:
-            if h.data.shape[0] == h.data.shape[1] and h.data.shape[0] > N_COSMO:
-                cov_full = np.array(h.data)
-
-    hdul.close()
-
-    if data is None or cov_full is None:
-        raise RuntimeError("Failed to locate DES Y3 data or covariance")
-
-    # Project to cosmology block
-    cov = cov_full[:N_COSMO, :N_COSMO]
-
-    return data, cov
+def compute_chi2(observed, expected):
+    """
+    Compute the chi-squared statistic for two arrays.
+    """
+    observed = np.asarray(observed)
+    expected = np.asarray(expected)
+    chi2 = np.sum((observed - expected) ** 2 / expected)
+    df = len(observed) - 1
+    p_value = 1 - stats.chi2.cdf(chi2, df)
+    return chi2, df, p_value
 
 
-def chi2(model_vec):
-    data, cov = load_des_y3()
-    diff = data - model_vec
-    icov = np.linalg.inv(cov)
-    return float(diff @ icov @ diff)
+def main():
+    """
+    Example usage of compute_chi2.
+    """
+    # Example data
+    observed = [10, 20, 30, 40]
+    expected = [12, 18, 33, 37]
+
+    chi2, df, p = compute_chi2(observed, expected)
+    print(
+        "Chi2: {}, Degrees of Freedom: {}, p-value: {}".format(
+            chi2, df, p
+        )
+    )
 
 
 if __name__ == "__main__":
-    data, cov = load_des_y3()
-    print("N =", data.size)
-    print("Cov shape =", cov.shape)
+    main()
