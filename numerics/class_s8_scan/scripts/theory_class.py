@@ -1,5 +1,6 @@
 from classy import Class
 
+
 def compute_theory(w0, wa):
     cosmo = Class()
 
@@ -32,4 +33,3 @@ def compute_theory(w0, wa):
     cosmo.empty()
 
     return sigma8, Omega_m
-

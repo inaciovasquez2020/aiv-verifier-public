@@ -4,6 +4,7 @@ from astropy.io import fits
 FITS_PATH = "data/des_y3/DES_Y3_3x2pt.fits"
 N_COSMO = 480   # DES Y3 3×2pt data length
 
+
 def load_des_y3():
     hdul = fits.open(FITS_PATH)
 
